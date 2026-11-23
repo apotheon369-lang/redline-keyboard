@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#040407"/>
+      <stop offset="55%" stop-color="#0A0710"/>
+      <stop offset="100%" stop-color="#040407"/>
+    </linearGradient>
+    <linearGradient id="laser" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF1E42" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#FF1E42"/>
+      <stop offset="75%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF1E42"/>
+      <stop offset="60%" stop-color="#FF2A85"/>
+      <stop offset="100%" stop-color="#00F0FF"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background chassis -->
+  <rect width="1200" height="380" rx="18" fill="url(#bg)"/>
+  <rect x="2" y="2" width="1196" height="376" rx="16" fill="none" stroke="#23192B" stroke-width="2"/>
+
+  <!-- Subtle tactical grid -->
+  <g stroke="#141422" stroke-width="1">
+    <line x1="0" y1="76" x2="1200" y2="76"/>
+    <line x1="0" y1="152" x2="1200" y2="152"/>
+    <line x1="0" y1="228" x2="1200" y2="228"/>
+    <line x1="0" y1="304" x2="1200" y2="304"/>
+    <line x1="150" y1="0" x2="150" y2="380"/>
+    <line x1="300" y1="0" x2="300" y2="380"/>
+    <line x1="450" y1="0" x2="450" y2="380"/>
+    <line x1="600" y1="0" x2="600" y2="380"/>
+    <line x1="750" y1="0" x2="750" y2="380"/>
+    <line x1="900" y1="0" x2="900" y2="380"/>
+    <line x1="1050" y1="0" x2="1050" y2="380"/>
+  </g>
+
+  <!-- Top & bottom neon laser rails -->
+  <rect x="40" y="18" width="1120" height="3" fill="url(#laser)" filter="url(#glow)"/>
+  <rect x="40" y="359" width="1120" height="2" fill="url(#laser)" opacity="0.6"/>
+
+  <!-- Left Title Block -->
+  <text x="72" y="128" fill="#FF1E42" font-family="monospace" font-size="16" font-weight="bold" letter-spacing="5">ZERO BLOAT · ZERO ADS · 100% FREE ANDROID IME</text>
+  <text x="70" y="205" fill="#F6F6FC" font-family="sans-serif" font-size="76" font-weight="900" letter-spacing="4">REDLINE</text>
+  <text x="454" y="205" fill="#FF1E42" font-family="monospace" font-size="68" font-weight="900" filter="url(#glow)">//</text>
+  <text x="72" y="252" fill="#00F0FF" font-family="monospace" font-size="22" font-weight="bold" letter-spacing="3">NEON GLIDE · AI VOICE · FONT STUDIO · TERMUX DEV</text>
+
+  <!-- Pill badges -->
+  <g font-family="monospace" font-size="13" font-weight="bold">
+    <rect x="72" y="284" width="128" height="34" rx="7" fill="#180A12" stroke="#FF1E42" stroke-width="1.5"/>
+    <text x="136" y="306" fill="#FF1E42" text-anchor="middle">~450 KB APK</text>
+
+    <rect x="214" y="284" width="142" height="34" rx="7" fill="#08161C" stroke="#00F0FF" stroke-width="1.5"/>
+    <text x="285" y="306" fill="#00F0FF" text-anchor="middle">SHARK2 SWIPE</text>
+
+    <rect x="370" y="284" width="132" height="34" rx="7" fill="#1B1408" stroke="#FFB000" stroke-width="1.5"/>
+    <text x="436" y="306" fill="#FFB000" text-anchor="middle">6 PRO FONTS</text>
+  </g>
+
+  <!-- Right Stylized Neon Keyboard Deck Preview -->
+  <g transform="translate(650, 58)">
+    <!-- Outer deck -->
+    <rect x="0" y="0" width="485" height="262" rx="14" fill="#07070D" stroke="#2E1B2A" stroke-width="2"/>
+    <rect x="12" y="4" width="461" height="2.5" fill="#FF1E42" filter="url(#glow)"/>
+
+    <!-- Voice equalizer HUD strip -->
+    <rect x="14" y="16" width="457" height="34" rx="7" fill="#0D0D16" stroke="#242032"/>
+    <rect x="22" y="22" width="52" height="22" rx="5" fill="#FF173A"/>
+    <text x="48" y="37" fill="#FFFFFF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">>_ DEV</text>
+
+    <!-- Neon audio bars -->
+    <g fill="#00F0FF" filter="url(#glow)">
+      <rect x="92" y="28" width="4" height="10" rx="2"/>
+      <rect x="102" y="23" width="4" height="20" rx="2" fill="#FF1E42"/>
+      <rect x="112" y="20" width="4" height="26" rx="2"/>
+      <rect x="122" y="25" width="4" height="16" rx="2" fill="#FF1E42"/>
+      <rect x="132" y="21" width="4" height="24" rx="2"/>
+      <rect x="142" y="27" width="4" height="12" rx="2" fill="#FF1E42"/>
+      <rect x="152" y="24" width="4" height="18" rx="2"/>
+    </g>
+    <text x="172" y="38" fill="#B8C0D8" font-family="monospace" font-size="12">AI VOICE // PICKING UP</text>
+    <rect x="415" y="22" width="48" height="22" rx="5" fill="#101822" stroke="#00F0FF"/>
+    <text x="439" y="37" fill="#00F0FF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">MIC</text>
+
+    <!-- Row 1 keys -->
+    <g fill="#12121B" stroke="#282032" stroke-width="1.2">
+      <rect x="14" y="62" width="41" height="40" rx="6"/><rect x="60" y="62" width="41" height="40" rx="6"/>
+      <rect x="106" y="62" width="41" height="40" rx="6"/><rect x="152" y="62" width="41" height="40" rx="6"/>
+      <rect x="198" y="62" width="41" height="40" rx="6"/><rect x="244" y="62" width="41" height="40" rx="6"/>
+      <rect x="290" y="62" width="41" height="40" rx="6"/><rect x="336" y="62" width="41" height="40" rx="6"/>
+      <rect x="382" y="62" width="41" height="40" rx="6"/><rect x="428" y="62" width="41" height="40" rx="6"/>
+    </g>
+    <!-- Row 2 keys -->
+    <g fill="#12121B" stroke="#282032" stroke-width="1.2">
+      <rect x="36" y="108" width="41" height="40" rx="6"/><rect x="82" y="108" width="41" height="40" rx="6"/>
+      <rect x="128" y="108" width="41" height="40" rx="6"/><rect x="174" y="108" width="41" height="40" rx="6"/>
+      <rect x="220" y="108" width="41" height="40" rx="6"/><rect x="266" y="108" width="41" height="40" rx="6"/>
+      <rect x="312" y="108" width="41" height="40" rx="6"/><rect x="358" y="108" width="41" height="40" rx="6"/>
+      <rect x="404" y="108" width="41" height="40" rx="6"/>
+    </g>
+    <!-- Row 3 keys -->
+    <g fill="#12121B" stroke="#282032" stroke-width="1.2">
+      <rect x="14" y="154" width="62" height="40" rx="6" fill="#1C1422" stroke="#FF1E42"/>
+      <rect x="82" y="154" width="41" height="40" rx="6"/><rect x="128" y="154" width="41" height="40" rx="6"/>
+      <rect x="174" y="154" width="41" height="40" rx="6"/><rect x="220" y="154" width="41" height="40" rx="6"/>
+      <rect x="266" y="154" width="41" height="40" rx="6"/><rect x="312" y="154" width="41" height="40" rx="6"/>
+      <rect x="358" y="154" width="41" height="40" rx="6"/>
+      <rect x="405" y="154" width="64" height="40" rx="6" fill="#181524"/>
+    </g>
+    <!-- Spacebar row -->
+    <rect x="14" y="202" width="68" height="42" rx="6" fill="#181524" stroke="#282032"/>
+    <rect x="88" y="202" width="40" height="42" rx="6" fill="#181524" stroke="#282032"/>
+    <rect x="134" y="202" width="212" height="42" rx="6" fill="#14131E" stroke="#362234"/>
+    <text x="240" y="227" fill="#FFB000" font-family="monospace" font-size="12" font-weight="bold" letter-spacing="3" text-anchor="middle">REDLINE</text>
+    <rect x="352" y="202" width="40" height="42" rx="6" fill="#181524" stroke="#282032"/>
+    <rect x="398" y="202" width="71" height="42" rx="6" fill="#FF173A" filter="url(#glow)"/>
+    <text x="433" y="228" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">SEND</text>
+
+    <!-- Neon Plasma Glide Swipe Ribbon across keys! -->
+    <path d="M 102 128 Q 165 70 218 82 T 320 128 Q 370 155 402 82" fill="none" stroke="url(#trail)" stroke-width="11" stroke-linecap="round" opacity="0.35" filter="url(#softGlow)"/>
+    <path d="M 102 128 Q 165 70 218 82 T 320 128 Q 370 155 402 82" fill="none" stroke="url(#trail)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M 102 128 Q 165 70 218 82 T 320 128 Q 370 155 402 82" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="402" cy="82" r="8" fill="#00F0FF" opacity="0.65" filter="url(#glow)"/>
+    <circle cx="402" cy="82" r="3.5" fill="#FFFFFF"/>
+  </g>
+</svg>
